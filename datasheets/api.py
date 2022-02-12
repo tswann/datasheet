@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, status
 from datasheets.models import Datasheet
 
 app = FastAPI()
@@ -14,6 +14,6 @@ def datasheets():
     return []
 
 
-@app.post("/datasheets")
+@app.post("/datasheets", status_code=status.HTTP_201_CREATED)
 def create_datasheet(datasheet: Datasheet):
-    return {"data": datasheet.json()}
+    return datasheet
