@@ -2,13 +2,17 @@
 name = "datasheet"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Tam Swann"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+fastapi = "^0.73.0"
+uvicorn = "^0.17.4"
+requests = "^2.27.1"
 
 [tool.poetry.dev-dependencies]
 ipython = "^8.0.1"
+pytest = "^7.0.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
