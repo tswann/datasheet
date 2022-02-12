@@ -1,5 +1,5 @@
 from datasheets.api import app
-from datasheets.models.datasheet import Datasheet
+from datasheets.models import Datasheet
 from fastapi.testclient import TestClient
 
 client = TestClient(app)

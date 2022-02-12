@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from datasheets.models.datasheet import Datasheet
+from datasheets.models import Datasheet
 
 app = FastAPI()
 
