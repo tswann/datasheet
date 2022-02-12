@@ -2,9 +2,9 @@ name: Build datasheets
 
 on: [push, pull_request]
 
-job:
+jobs:
   build:
-    runs-on: ubunti-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Pull source code
         uses: actions/checkout@v2
