@@ -3,9 +3,9 @@ from pydantic import BaseModel
 
 
 class ScaleName(str, Enum):
-    grandis ='grandis'
-    immensus = 'immensus'
-    magnificus = 'magnificus'
+    grandis = "grandis"
+    immensus = "immensus"
+    magnificus = "magnificus"
 
 
 class Scale(BaseModel):

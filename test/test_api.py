@@ -20,10 +20,11 @@ def test_terminals():
 
 def test_create_terminal():
     data = Terminal(
-        name="test", 
-        description="testing", 
+        name="test",
+        description="testing",
         scale=Scale(name=ScaleName.grandis, value=6),
-        base_points=180)
+        base_points=180,
+    )
     resp = client.post("/terminals", data=data.json())
     assert resp.status_code == status.HTTP_201_CREATED
     assert resp.json() == data
