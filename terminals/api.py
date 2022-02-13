@@ -1,5 +1,5 @@
 from fastapi import FastAPI, status
-from datasheets.models import Terminal
+from terminals.models import Terminal
 
 app = FastAPI()
 

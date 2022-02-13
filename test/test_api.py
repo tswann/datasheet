@@ -1,5 +1,5 @@
-from datasheets.api import app
-from datasheets.models import Terminal
+from terminals.api import app
+from terminals.models import Terminal
 from fastapi.testclient import TestClient
 from fastapi import status
 
