@@ -10,7 +10,7 @@ def root():
 
 
 @app.get("/terminals")
-def datasheets():
+def terminals():
     return []
 
 

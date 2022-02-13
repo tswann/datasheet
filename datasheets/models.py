@@ -5,4 +5,3 @@ class Terminal(BaseModel):
     name: str
     description: str
     scale: int
-    
