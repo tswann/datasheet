@@ -1,5 +1,5 @@
 from datasheets.api import app
-from datasheets.models import Datasheet
+from datasheets.models import Terminal
 from fastapi.testclient import TestClient
 from fastapi import status
 
@@ -13,13 +13,13 @@ def test_root():
 
 
 def test_datasheets():
-    resp = client.get("/datasheets")
+    resp = client.get("/terminals")
     assert resp.status_code == status.HTTP_200_OK
     assert resp.json() == []
 
 
 def test_create_datasheet():
-    data = Datasheet(name="test", description="testing")
-    resp = client.post("/datasheets", data=data.json())
+    data = Terminal(name="test", description="testing", scale=10)
+    resp = client.post("/terminals", data=data.json())
     assert resp.status_code == status.HTTP_201_CREATED
     assert resp.json() == data

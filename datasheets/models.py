@@ -1,6 +1,8 @@
 from pydantic import BaseModel
 
 
-class Datasheet(BaseModel):
+class Terminal(BaseModel):
     name: str
     description: str
+    scale: int
+    

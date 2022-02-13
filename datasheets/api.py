@@ -1,5 +1,5 @@
 from fastapi import FastAPI, status
-from datasheets.models import Datasheet
+from datasheets.models import Terminal
 
 app = FastAPI()
 
@@ -9,11 +9,11 @@ def root():
     return {"message": "testing"}
 
 
-@app.get("/datasheets")
+@app.get("/terminals")
 def datasheets():
     return []
 
 
-@app.post("/datasheets", status_code=status.HTTP_201_CREATED)
-def create_datasheet(datasheet: Datasheet):
-    return datasheet
+@app.post("/terminals", status_code=status.HTTP_201_CREATED)
+def create_terminal(terminal: Terminal):
+    return terminal
